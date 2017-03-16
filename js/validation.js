@@ -52,20 +52,19 @@ $(document).ready(function() {
 		        url: 'ajax.php',
 		        data: { ozc: ozc, dzc: dzc, weight: weight, cog: cog, width: width, height: height, length: length },
 		        success: function(data) {
+		        	alert (data);
 		        	if (data == 'False') {
-		        		alert ('Sorry the could not return value. Please try after some time');
+		        		alert ('Sorry the api could not return value. Please try after some time');
 		        	} else {
-		        		//$('#ajx_resp').html
-
 		        		var tbl=$("<table/>").attr("id","mytable");
 					    $("#div1").append(tbl);
 					    for(var i = 0; i < delivery_options.length; i++) {
 					        var tr="<tr>";
-					        var td0 = "<td><input type='checkbox' id="' + i '" class='chk'></td>";
-;					        var td1 = "<td class=rc1"' + i +'">" + delivery_options[i]["delivery_estimate_business_days"] + "</td>";
-					        var td2 = "<td class=rc2"' + i +'">" + delivery_options[i]["final_shipping_cost"] + "</td>";
-					        var td3 = "<td class=rc3"' + i +'">" + delivery_options[i]["description"] + "</td></tr>";
-					       $("#mytable").append(tr + td1 + td2 +t d3); 
+					        //var td0 = "<td><input type='checkbox' id="' + i '" class='chk'></td>";
+						    //var td1 = "<td class=rc1"' + i +'">" + delivery_options[i]["delivery_estimate_business_days"] + "</td>";
+					        //var td2 = "<td class=rc2"' + i +'">" + delivery_options[i]["final_shipping_cost"] + "</td>";
+					        //var td3 = "<td class=rc3"' + i +'">" + delivery_options[i]["description"] + "</td></tr>";
+					       //$("#mytable").append(tr + td1 + td2 +t d3); 
 					    }
 
 		        	}
