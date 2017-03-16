@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS `customer_address` (
+`id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `address_name` text NOT NULL,
+  `type` enum('billing','shipping') NOT NULL,
+  `main` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+INSERT INTO customer_address (`id`, `customer_id`, `address_name`, `type`, `main`) VALUES (NULL, '1000', 'bucharest', 'billing', '0');
+INSERT INTO customer_address (`id`, `customer_id`, `address_name`, `type`, `main`) VALUES (NULL, '1001', 'sao paolo', 'billing', '0');
+INSERT INTO customer_address (`id`, `customer_id`, `address_name`, `type`, `main`) VALUES (NULL, '1000', 'madrid', 'shipping', '0');
+INSERT INTO customer_address (`id`, `customer_id`, `address_name`, `type`, `main`) VALUES (NULL, '1001', 'rome', 'shipping', '0');
